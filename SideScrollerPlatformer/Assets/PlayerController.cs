@@ -8,10 +8,10 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     private float horizontal;
-    private float moveSpeed = 5f;
-    private float jumpingForce = 5.5f;
     private bool doubleJump;
-
+    
+    [SerializeField] private float jumpingForce = 5.5f;
+    [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -21,12 +21,13 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         
-        // Jumps
+        // Jump
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
         }
         
+        // Double Jump
         if (Input.GetButtonDown("Jump"))
         {
             if (IsGrounded() || doubleJump)
