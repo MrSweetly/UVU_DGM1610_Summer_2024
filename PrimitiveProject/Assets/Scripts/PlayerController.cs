@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         // Gravity
         yHold -= gravity * Time.deltaTime;
         
-        movement.y = yHold; // Hold Gravity
+        movement.y = yHold;
 
         // Movement
         controller.Move(movement * (speed * Time.deltaTime));
