@@ -29,8 +29,9 @@ public class EnemyStopIfClose : MonoBehaviour
     
     void FaceTarget()
     {
+        var turnSpeed = Time.deltaTime * 5f;
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, turnSpeed);
     }
 }

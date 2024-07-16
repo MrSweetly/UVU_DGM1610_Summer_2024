@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         movement.y = yHold;
 
         // Movement
-        controller.Move(movement * (speed * Time.deltaTime));
+        var moveSpeed = movement * (speed * Time.deltaTime);
+        controller.Move(moveSpeed);
     }
 }
