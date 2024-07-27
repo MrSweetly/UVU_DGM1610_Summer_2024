@@ -12,11 +12,10 @@ public class PickupObject : MonoBehaviour
 
    private void OnTriggerEnter(Collider collider)
    {
-      if (collider.gameObject.CompareTag("Player"))
-      {
+      // When Player collides with object, pick up and destroy
+      if (collider.gameObject.CompareTag("Player")) {
          inManager.ItemCounter();
          Debug.Log("Item picked up!");
-         Destroy(gameObject);
-      }
+         Destroy(gameObject); }
    }
 }
