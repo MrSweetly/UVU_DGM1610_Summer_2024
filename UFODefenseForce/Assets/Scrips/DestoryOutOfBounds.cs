@@ -1,17 +1,22 @@
+using System;
 using UnityEngine;
 
 public class DestoryOutOfBounds : MonoBehaviour
 {
     public float lowBound;
     public float topBound;
-    
-    void Awake()
+
+    private GameManager gameManager;
+
+    void Start()
     {
-        Time.timeScale = 1;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        
     }
-    
+
     void Update()
     {
+        
         // Boundery contraints
         // Destroy object when out of top bound
         if (transform.position.z > topBound) {
@@ -19,7 +24,7 @@ public class DestoryOutOfBounds : MonoBehaviour
         // Destroy object when out of low bound
         else if (transform.position.z < lowBound) {
             Debug.Log("Game Over");
-            Destroy(gameObject);
-            Time.timeScale = 0; }
+            Destroy(gameObject); 
+            gameManager.isGameOver = true; }
     }
 }

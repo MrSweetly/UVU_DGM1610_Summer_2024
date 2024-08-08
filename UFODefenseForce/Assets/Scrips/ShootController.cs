@@ -4,6 +4,7 @@ public class ShootController : MonoBehaviour
 {
     public Transform blaster;
     public GameObject projectile;
+
     void Update()
     {
         // Shoot projectile from blaster while maintaining rotation
