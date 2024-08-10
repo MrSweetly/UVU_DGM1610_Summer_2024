@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: dd24257445cb64f00992d47bd20f086b, type: 3}
+  boom: {fileID: 5601036089067188820, guid: 924e772d99fea934f8c7dff7c622e78a, type: 3}
   scoreManager: {fileID: 0}
   scoreToGive: 100
 --- !u!54 &4668857512083158977
