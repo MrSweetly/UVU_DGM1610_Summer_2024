@@ -11,12 +11,10 @@ public class DestoryOutOfBounds : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        
     }
 
     void Update()
     {
-        
         // Boundery contraints
         // Destroy object when out of top bound
         if (transform.position.z > topBound) {

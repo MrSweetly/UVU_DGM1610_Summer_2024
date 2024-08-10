@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         if (isGameOver) {
             EndGame(); }
         else {
+            
             gameOverText.gameObject.SetActive(false); }
     }
 

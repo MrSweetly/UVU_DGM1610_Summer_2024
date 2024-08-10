@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45ff5f4fd029d74fbba4989f59317eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 9c32617ebf03b4ac3b3f521750435944, type: 3}
   scoreManager: {fileID: 0}
   scoreToGive: 50
 --- !u!54 &4895002666520909705
